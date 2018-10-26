@@ -3,16 +3,24 @@
 ### Pré-requisitos
 
 
-### Instalando
-
-
-
-## construído com
+## Construído com
 
  * [Java](https://www.oracle.com/technetwork/pt/java/javase/overview/index.html) - O framework web usado
  * [Spring](https://spring.io/) - Utilizado para boot , transações, api, resources e etc...
  * [Hibernate](http://hibernate.org/) - Usado para gerar as tabelas e realizar a persistência dos dados 
  * [hsqldb](http://hsqldb.org/) - Usado para armazenamento das informações
+
+## Instalando
+
+O aplicativo usa o Spring Boot, por isso é fácil de executar. 
+>Você pode inicializar de algumas maneiras:
+ - Execute o método main `br.inf.ufg.bea.BeaApplication`
+ - Use o plugin Maven Spring Boot: `mvn spring-boot: run`
+ - Empacote o aplicativo (JAR) e execute-o: `java -jar bea-0.0.1-SNAPSHOT.jar`
+
+## Visualizando o aplicativo
+
+Para visualizar o aplicativo em execução, visite [http://localhost:8080/contatos](http://localhost:8080/contatos) em seu navegador
 
 ## Autores
 
