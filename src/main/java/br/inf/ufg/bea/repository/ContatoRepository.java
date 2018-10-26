@@ -10,4 +10,6 @@ import br.inf.ufg.bea.model.ContatoTO;
 @RepositoryRestResource(path="/contatos")
 public interface ContatoRepository extends CrudRepository<ContatoTO, Long> {
 
+    ContatoTO findByCpf(String cpf);
+
 }

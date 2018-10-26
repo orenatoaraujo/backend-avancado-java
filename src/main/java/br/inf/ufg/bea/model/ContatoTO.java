@@ -6,7 +6,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.br.CNPJ;
+import org.hibernate.validator.constraints.br.CPF;
 
 import br.inf.ufg.bea.enuns.EContato;
 
@@ -14,7 +14,7 @@ import br.inf.ufg.bea.enuns.EContato;
 @Entity
 public class ContatoTO extends Domain {
 
-    @CNPJ
+    @CPF
     @Length(min = 11, max = 11)
     @Column(name = "cpf", nullable = false, length = 11)
     private String   cpf;
