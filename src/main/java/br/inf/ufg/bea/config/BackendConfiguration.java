@@ -18,7 +18,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 @Configuration
 @ComponentScan
 @EnableJpaRepositories(basePackages = "br.inf.ufg.bea")
-@PropertySource(value = "classpath:application.properties", ignoreResourceNotFound = true, name = "applicationProperties")
+@PropertySource(value = "classpath:/application.properties", ignoreResourceNotFound = true, name = "applicationProperties")
 public class BackendConfiguration {
 
 	private static final String[] PACKAGES = { "br.inf.ufg.bea" };

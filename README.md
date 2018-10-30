@@ -2,25 +2,58 @@
 
 ### Pré-requisitos
 
+* [Java 8](http://www.matera.com/blog/post/tutorial-instalacao-do-java-jdk-e-eclipse-no-windows)
+* [Maven](http://www.matera.com/blog/post/tutorial-instalacao-apache-maven-configuracao-eclipse)
 
 ## Construído com
 
  * [Java](https://www.oracle.com/technetwork/pt/java/javase/overview/index.html) - O framework web usado
- * [Spring](https://spring.io/) - Utilizado para boot , transações, api, resources e etc...
+ * [Spring](https://spring.io/) - Utilizado para boot , transações, api, resources e etc.
  * [Hibernate](http://hibernate.org/) - Usado para gerar as tabelas e realizar a persistência dos dados 
  * [hsqldb](http://hsqldb.org/) - Usado para armazenamento das informações
 
 ## Instalando
 
 O aplicativo usa o Spring Boot, por isso é fácil de executar. 
->Você pode inicializar de algumas maneiras:
- - Execute o método main `br.inf.ufg.bea.BeaApplication`
- - Use o plugin Maven Spring Boot: `mvn spring-boot: run`
- - Empacote o aplicativo (JAR) e execute-o: `java -jar bea-0.0.1-SNAPSHOT.jar`
+> Você pode inicializar de algumas maneiras:
+    
+ 1. Descompactar o projeto em uma pasta de sua preferência
+    * `D:\backend>`
+    
+ 1. Acesse a pasta via dos e execute o comando
+    * `D:\backend\backend-avancado-java-master>mvn package`
+
+ 1. Inicialize o projeto 
+    * `D:\backend\backend-avancado-java-master\target>java -jar bea-0.0.1-SNAPSHOT.jar`
 
 ## Visualizando o aplicativo
 
 Para visualizar o aplicativo em execução, visite [http://localhost:8080/contatos](http://localhost:8080/contatos) em seu navegador
+
+ * Listar todos os contatos (GET)
+ 
+    http://localhost:8080/contatos
+
+ * Para listar todos os contatos que pertencem a um cpf (GET)
+ 
+    http://localhost:8080/contatos/search/findContatoByCpf?cpf=69083026019
+
+ * Para consultar um contato (GET)
+ 
+    http://localhost:8080/contatos/2
+
+ * Para incluir um contato (POST)
+
+    http://localhost:8080/contatos
+
+
+```json 
+{
+    "cpf": "99988877766",
+    "descricao": "(62) 9999-8877",
+    "tipo": "CELULAR"
+}
+```
 
 ## Autores
 

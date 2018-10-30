@@ -44,6 +44,13 @@ public class BeaApplication {
         c3.setDescricao("fake@mail.com");
         c3.setTipo(EContato.EMAIL);
         contatoRepository.save(c3);
+
+        ContatoTO c4 = new ContatoTO();
+        c4.setCpf("69083026019");
+        c4.setDescricao("bob@mail.com");
+        c4.setTipo(EContato.EMAIL);
+        contatoRepository.save(c4);
+
     }
 
 }
