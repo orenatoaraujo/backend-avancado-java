@@ -36,7 +36,7 @@ Para visualizar o aplicativo em execução, visite [http://localhost:8080/contat
 
  * Para listar todos os contatos que pertencem a um cpf (GET)
  
-    http://localhost:8080/contatos/search/findContatoByCpf?cpf=69083026019
+    http://localhost:8080/contatos/search/findByCpf?cpf=69083026019
 
  * Para consultar um contato (GET)
  

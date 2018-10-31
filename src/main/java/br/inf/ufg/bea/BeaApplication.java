@@ -21,8 +21,8 @@ public class BeaApplication {
     @Bean
     CommandLineRunner init(ContatoRepository contatoRepository) {
         return args -> {
-        	List<ContatoTO> contato = contatoRepository.findByCpf("24871317056");
-            if (contato == null || contato.isEmpty()) {
+        	List<ContatoTO> contatos = contatoRepository.findByCpf("24871317056");
+            if (contatos == null || contatos.isEmpty()) {
                 initContatos(contatoRepository);
             }
         };
