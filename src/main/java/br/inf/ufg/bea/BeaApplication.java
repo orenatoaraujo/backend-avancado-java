@@ -1,5 +1,7 @@
 package br.inf.ufg.bea;
 
+import java.util.List;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,8 +21,8 @@ public class BeaApplication {
     @Bean
     CommandLineRunner init(ContatoRepository contatoRepository) {
         return args -> {
-            ContatoTO contato = contatoRepository.findByCpf("24871317056");
-            if (contato == null) {
+        	List<ContatoTO> contato = contatoRepository.findByCpf("24871317056");
+            if (contato == null || contato.isEmpty()) {
                 initContatos(contatoRepository);
             }
         };
